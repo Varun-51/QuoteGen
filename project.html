@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome</title>
+</head>
+	 <style>
+
+    body {
+      background-color: grey;
+      text-align: center;
+      font-size: 18px;
+
+    }
+
+  </style>
+	<p id ="quote"></p>
+
+	<button id="next-quote">next quote</button>
+
+<script>
+const quotes = [
+"So many books, so little time.",
+"A room without books is like a body without a soul.",
+"Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+"You only live once, but if you do it right, once is enough.",
+
+	];
+let currentQuoteIndex = 0;
+
+    document.getElementById("next-quote").addEventListener("click", function() {
+      currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+      document.getElementById("quote").innerHTML = quotes[currentQuoteIndex];
+    });
+
+    document.getElementById("quote").innerHTML = quotes[currentQuoteIndex]; 	
+</script>
+</body>
+</html>
